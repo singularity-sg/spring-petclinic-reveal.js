@@ -67,7 +67,7 @@
 						<p>We will share our experiences of using Bootstrap / AngularJS with Spring from a designer and developer's point of view</p>
 					</section>
 				</section>
-					
+
 				<section>
 					<h2>How 2 developers and 1 designer worked together</h2>
 					<section>
@@ -87,7 +87,7 @@
 				<section>
 					<h2>Why Bootstrap ?</h2>
 					<section>
-						<ul>	
+						<ul>
 							<li class="fragment">Most popular HTML, CSS, JS framework</li>
 							<li class="fragment">Quick start to all skill levels</li>
 							<li class="fragment">Robust UI system (layout grid, typography, components)</li>
@@ -95,7 +95,7 @@
 							<li class="fragment">Cross Everything (Supports major browser on various OS)</li>
 							<li class="fragment">Rich documentation</li>
 							<li class="fragment">Open Source & Community</li>
-							<li class="fragment">Available of plugins & themes both free and paid</li>							
+							<li class="fragment">Available of plugins & themes both free and paid</li>
 						</ul>
 					</section>
 					<aside class="notes">
@@ -106,7 +106,7 @@
 				<section>
 					<h2>Why AngularJS ?</h2>
 					<section>
-						<ul>	
+						<ul>
 							<li class="fragment">HTML-like syntax means design is portable</li>
 							<li class="fragment">Directives enable us to provide powerful tools for web designers</li>
 							<li class="fragment">Familiar MVC model for Spring developers</li>
@@ -135,15 +135,102 @@
 				</section>
 
 				<section>
-					<h2>Comparison between using JSP and AngularJS</h2>
+					<h2>Should you migrate to AngularJS</h2>
 					<section>
-						Should you move away from JSP?	
+						<h3>Effort vs Benefit</h3>
+						<h3>Collaboration</h3>
+						<h3>Future Proof</h3>
 					</section>
 					<aside class="notes">
 						Tony talks about advantages of AngularJS vs JSP/GWT
 					</aside>
 				</section>
-
+				<section>
+					<section>
+						<h2>Effort vs Benefit</h2>
+						<ul>
+							<li class="fragment">Learning Curve</li>
+							<li class="fragment">AngularJs compare to jsp, jQuery, GWT?</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Learning Curve</h3>
+						<ul>
+							<li class="fragment">Very well documented (even has AngularJs song)</li>
+							<li class="fragment">Fast to build HelloWorld application</li>
+							<li class="fragment">Easy to learn basic concepts like controller, route, view, binding</li>
+							<li class="fragment">Directive is easy to use (Andrew can use it)</li>
+							<li class="fragment">If you want to pass objects around then need to pick up concepts like scope, rootscope,...</li>
+							<li class="fragment">Need to learn Angular way of testing</li>
+							<li class="fragment">Directive is hard to read and hard to write</li>
+						</ul>
+					</section>
+					<section>
+						<h3>General Pros & Cons</h3>
+						<ul>
+							<li class="fragment">Medium sizes (angular.js < 1MB)</li>
+							<li class="fragment">Modules size vary from 6kb to ~100kb (without obfuscation)</li>
+							<li class="fragment">Easy to use alone but may take extra effort to integrate with third-party js libraries</li>
+							<li class="fragment">The more directives you have, the smaller is the code base</li>
+							<li class="fragment">Clean project structure</li>
+							<li class="fragment">2-way binding is good</li>
+							<li class="fragment">Quite responsive</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Compare with Jsp</h3>
+						<ul>
+							<li class="fragment">Loose coupling is the way to go: Angular Webapp access Restful server (which can be Java or .NET)</li>
+							<li class="fragment">Client-side scripting is a safer investment</li>
+							<li class="fragment">Single page application provide better user experience</li>
+							<li class="fragment">Developer and Designer can work together on the same source code</li>
+							<li class="fragment">Directive may be equals to jsp tag + javascript</li>
+							<li class="fragment">Can be viewed without server</li>
+							<li class="fragment">May be harder to test if use HtmlUnit or WebUnit</li>
+							<li class="fragment">May be harder to integrate with third-party javascript</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Compare with jQuery + native Javascript</h3>
+						<ul>
+							<li class="fragment">Scope is a plus</li>
+							<li class="fragment">Pre-defined project structure</li>
+							<li class="fragment">2-way binding save a lot of typing</li>
+							<li class="fragment">Smaller code base and less control</li>
+							<li class="fragment">More difficult to integrate with third-pary library, it is better to have equivalent directive</li>
+							<li class="fragment">Directive is easier to read and easier to track compare to registering event</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Compare with Gwt</h2>
+						<ul>
+							<li class="fragment">Readability</li>
+							<li class="fragment">Ability to run without server</li>
+							<li class="fragment">RPC is very tight-coupling</li>
+							<li class="fragment">Possible to use Browser Debug</li>
+							<li class="fragment">No more swearing and waiting for webapp deployment</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h2>Collaboration</h2>
+					<ul>
+						<li class="fragment">Angularised page still look very similar to original template. Designer can work on real webapp</li>
+						<li class="fragment">Angular integrate well wit Bootstrap and jQuery</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Future Proof</h2>
+					<ul>
+						<li class="fragment">Big Community</li>
+						<li class="fragment">Angular module and directive acting like Apache Common</li>
+						<li class="fragment">Angular 2, which built on ECMASCript 6 will not be backward compatible with older browser</li>
+						<li class="fragment">Angular 1.x may be developed in parallel as Play framework 1 & 2 </li>
+						<li class="fragment">Angular 1.2 support IE8, Angular 1.3 support IE9</li>
+						<li class="fragment">Directive protect the template from underlying technology (replace Bootstrap with something else?)</li>
+						<li class="fragment">Client side script has longer life-span compare to server side scripting</li>
+					</ul>
+				</section>
 				<section>
 					<h2>Export to PDF</h2>
 					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
