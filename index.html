@@ -42,7 +42,7 @@
 			<div class="slides">
 				<section>
 					<h1>Improving communications between Design and Development</h1>
-					<h3>with Bootstrap/AngularJS/Spring</h3>
+					<h3>with Bootstrap/AngularJS</h3>
 					<p>
 						<small>By <a href="">Andrew Abogado</a> / <a href="">Tony Nguyen</a> / <a href="http://singularity-sg.github.io">Lim Han</a></small>
 					</p>
@@ -61,23 +61,32 @@
 						<small>WDS, A Xerox Company</small>
 					</section>
 					<section>
-						<p>Our Challenge: How do you get designers and developers remotely located to work together to revamp the familiar PetClinic app?</p>
+						<div>Our Challenge: How do you get designers and developers remotely located to work together to revamp the familiar PetClinic app?</div>
+						<p class="fragment">
+							<small>Disclaimer : This is not an AngularJS or Bootstrap tutorial</small>
+						</p>
+						<aside data-markdown class="notes">
+							 - Talk about how we were invited by Michael to work together on the UI using Petclinic as a baseline
+						</aside>
 					</section>
 				</section>
 
 				<section>
-					<h2>How 2 developers and a designer worked together</h2>
+					<h2>Collaboration Tools</h2>
 					<section>
 						<ul>
 							<li class="fragment">Whatsapp</li>
-							<li class="fragment">GitHub</li>
+							<li class="fragment">GitHub (and email notifications)</li>
 							<li class="fragment">4 Meetups</li>
-							<li class="fragment">Sketches, Wireframe Flows, Mock-ups</li>
-							<li class="fragment">Conversion of Spring Petclinic project to RESTful webservices</li>
+							<li class="fragment">Sketches, Wireframe, Mock-ups</li>
 						</ul>
-					</section>
-					<aside class="notes">
-						Explain how we made use of tools like Whatsapp and Github webhooks to communicate changes to each other
+       				</section>
+          			<section>
+	            		<img class="stretch" data-src="images/wireframe-flow.png"/>
+	          		</section>
+	          		<aside class="notes" data-markdown>
+			           - Could use Slack in place of Whatsapp
+			           - Use of GitHub Webhooks to trigger notifications
 					</aside>
 				</section>
 
@@ -93,7 +102,7 @@
 					</section>
 					<section>
 						<h2>Discovery</h2>
-						<aside class="notes">
+						<aside data-markdown class="notes">
 							- On on meeting, Michael shared the demo app. Han and Tony converted to us Spring & AngularJS created a repo. We met again
 							- Show WhatsApp convo
 							- Requirements, researched use case and core needs of the app
@@ -104,7 +113,7 @@
 					</section>
 					<section>
 						<h2>Define</h2>
-						<aside class="notes">
+						<aside data-markdown class="notes">
 							- Define hierarchy of requirements (epicenter design) pick core goals of the design
 							- Initial sitemap & wireframe (show initial wireframe)
 							- Detailed sitemap and interaction flow (to communicate with developers better) (show wireflow)
@@ -112,7 +121,7 @@
 					</section>
 					<section>
 						<h2>Develop</h2>
-						<aside class="notes">
+						<aside data-markdown class="notes">
 							- Sketching (low fidelity wireframes) (show succeeding wireframes)
 							- Design a detailed mock (talk about design elements, attached mockups - branding: https://dribbble.com/branding)
 							- Develop UI interaction and prototype on Bootstrap right away
@@ -122,7 +131,7 @@
 					</section>
 					<section>
 						<h2>Deliver</h2>
-						<aside class="notes">
+						<aside data-markdown class="notes">
 							- Do it on the development environment then push to repo
 						</aside>
 					</section>
@@ -134,7 +143,7 @@
 				<section>
 					<h2>Existing design vs. New design</h2>
 					<p><small>Quick comparison</small></p>
-					<aside class="notes">
+					<aside data-markdown class="notes">
 						- Talk on Existing design and flaws
 						- Improvements on New design:
 							- View a list of veterinarians, pet owners, and pets.
@@ -151,7 +160,7 @@
 					<section>
 						<h2>Bootstrap</h2>
 						<p>UI framework</p>
-						<aside class="notes">
+						<aside data-markdown class="notes">
 							- Let see a quick show of hands?
 							- That's so 3 years ago. You probably have opinions with it already
 							- huge support community behind it
@@ -170,7 +179,7 @@
 							<li class="fragment">Open Source & Community</li>
 							<li class="fragment">Available of plugins & themes both free and paid</li>
 						</ul>
-						<aside class="notes">
+						<aside data-markdown class="notes">
 							1. Show Github popularity and Google Trends)
 							2. Low barrier to entry. Familiarity to HTML and CSS for designers and developers helps
 							3. Structured Grid System, Typography, Reusable components
@@ -208,29 +217,33 @@
 
 				<section>
 					<h2>Why AngularJS ?</h2>
-					<section>
-						<ul>
-							<li class="fragment">HTML-like syntax means design is portable</li>
-							<li class="fragment">Directives enable us to provide powerful tools for web designers</li>
-							<li class="fragment">Familiar DI and MVC model for Spring developers</li>
-							<li class="fragment">Demarcation of UI development and backend RESTful services provided by Spring</li>
-							<li class="fragment">Testability</li>
-						</ul>
-					</section>
-					<section>
-						<h3>HTML syntax means design is portable</h3>
-						<aside class="notes">
-							If we are not using custom directives with name changes, the templates for AngularJS is essentially HTML
-						</aside>
-					</section>
+					<aside data-markdown class="notes">
+						- HTML-like syntax means design is portable.
+						- Directives are powerful
+						- MVC and Dependency Injection
+						- Demarcation of responsibilities
+						- Testability (Mocking)
+						- 2-way binding
+					</aside>
 				</section>
-
+					
 				<section>
-					<h3>Directives</h3>
-					<aside class="notes">
-						Directives allow us to define our own domain-specific language for the UI
+					<h3>1. HTML-like syntax means design is portable</h3>
+					<aside data-markdown class="notes">
+						- If we are not using custom directives with name changes, the templates for AngularJS is essentially HTML
+						- Also, try not to use {{ }} within the template. Use ng-bind instead.
+					</aside>
+				</section>
+					
+				<section>
+					<h3>2. Directives</h3>
+					<aside data-markdown class="notes">
+						- Demo the use of the scroll-to-target directive
 					</aside>
 					<section>
+						<aside class="notes" data-markdown>
+							- Sample directive for scrolling to a target on click
+						</aside>
 						<pre class="fragment">
 							<code>
 app.directive('scrollToTarget', function() {
@@ -245,7 +258,13 @@ app.directive('scrollToTarget', function() {
 });		      
 							</code>
 						</pre>
-						<pre class="fragment">
+					</section>
+					
+					<section>
+						<aside class="notes" data-markdown>
+							- Sample directive usage on the template
+						</aside>
+						<pre>
 							<code>
 <div class="jumbotron-headline-cell">
 	<h1>Pet care for the People who love them</h1>
@@ -256,40 +275,167 @@ app.directive('scrollToTarget', function() {
 						</pre>	
 					</section>
 				</section>
+					
 				<section>
-					<h3>MVC model && Dependency Injection</h3>
-					<aside class="notes">
-						Need to be careful when minifying as AngularJS uses Strings and eval to do Dependency injection
+					<h3>3. MVC model && Dependency Injection</h3>
+					<aside data-markdown class="notes">
+						- Need to be careful when minifying as AngularJS uses Strings and eval to do Dependency injection
+						- Show examples of Dependency Injection briefly
 					</aside>
+					<section>
+						<aside class="notes" data-markdown>
+							- A typical model in an AngularJS app
+						</aside>	
+						<pre class="fragment">
+							<code>
+var Pet = ['$resource','context', function($resource, context) {
+	return $resource(context + '/api/pets/:id');
+}];
+							</code>
+						</pre>
+					</section>
+					<section>
+						<aside class="notes" data-markdown>
+							- A typical controller in an AngularJS app
+						</aside>					
+						<pre>
+							<code>
+var PetController = ['$scope', 'Pet', function($scope, Pet) {
+	$scope.$on('$viewContentLoaded', function(event){
+		$('html, body').animate({
+		    scrollTop: $("#pets").offset().top
+		}, 1000);
+	});
+
+	$scope.pets = Pet.query();
+}];
+							</code>
+						</pre>
+					</section>
+					<section>
+						<aside class="notes" data-markdown>
+							- A typical template view in an AngularJS app
+						</aside>
+						<pre>
+							<code>
+<div class="col-md-3" data-ng-repeat="pet in pets | filter:search">
+  <div class="thumbnail">
+    <a href="#"><img data-ng-src="images/pets/pet{{pet.id % 10 + 1}}.jpg" alt="Generic placeholder image" class="img-circle"></a>
+    <div class="caption">
+      <h3 class="caption-heading"><a href="#" data-ng-bind="pet.name"></a></h3>
+      <p data-ng-bind="pet.type.name"></p>
+    </div>
+  </div>
+</div>
+							</code>
+						</pre>
+					</section>
 				</section>
+					
 				<section>
-					<h3>Demarcation of responsibilities between UI development and RESTful backend</h3>
+					<h3>4. Demarcation of responsibilities between UI development and RESTful backend</h3>
+					<aside data-markdown class="notes">
+						- Webapp development forces you to adopt a client/server architecture
+						- Benefits include separating your backend services with your client which can be mobile apps / tablets / tv etc..
+					</aside>
 					<ul>
 						<li class="fragment">Development in AngularJS can be completely separate from the Spring application</li>
 						<li class="fragment">The API becomes the contract between UI developers and Backend developers</li>
+						<li class="fragment">Application naturally adopts a client-server architecture which encourages reuse of services</li>
 					</ul>
 				</section>
+					
 				<section>
-					<h3>Testability</h3>
-					<ul>
-						<li class="fragment">Unit tests with Jasmine/Karma</li>
-						<li class="fragment">E2E testing using Protractor</li>
-					</ul>
-					<aside class="notes">
-						AngularJS with DI enables us to test everything easily using Jasmine. E2E testing is provided by Protractor
+					<h3>5. Testability</h3>
+					<aside data-markdown class="notes">
+						- AngularJS with DI enables us to test everything easily using Jasmine. 
+						- E2E testing is provided by Protractor
+						- Demonstrate use of mocking data for designers
 					</aside>
+					<section>
+						<ul>
+							<li class="fragment">Mocking of HTTP Backend calls</li>
+							<li class="fragment">Unit tests with Jasmine/Karma</li>
+							<li class="fragment">E2E testing using Protractor</li>
+						</ul>
+					</section>
+					
+					<section>
+						
+						<pre>
+							<code>
+var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBackend, $http, $q, context) {
+	return {
+		mock : function(useMockData) {
+			
+			var passThroughRegex = new RegExp('/static/mock-data/|components/');
+			$httpBackend.whenGET(passThroughRegex).passThrough();	
+			
+			if(useMockData) {
+				$q.defer();
+				$q.all([
+				        $http.get(context + '/static/mock-data/pets.json'),
+				        $http.get(context + '/static/mock-data/vets.json'),
+				        $http.get(context + '/static/mock-data/owners.json'),
+				        $http.get(context + '/static/mock-data/owner_one.json'),
+				        $http.get(context + '/static/mock-data/pettypes.json'),
+				]).then(function(data) {
+					console.log("Mocking /api/pets");
+					$httpBackend.whenGET(context + '/api/pets').respond(data[0].data);
+					console.log("Mocking /api/vets");
+					$httpBackend.whenGET(context + '/api/vets').respond(data[1].data);
+					console.log("Mocking /api/owners");
+					$httpBackend.whenGET(context + '/api/owners').respond(data[2].data);
+					console.log("Mocking /api/owners/1");
+					$httpBackend.whenGET(context + '/api/owners/1').respond(data[3].data);
+					console.log("Mocking /api/pets/types");
+					$httpBackend.whenGET(context + '/api/pets/types').respond(data[4].data);
+					
+					console.log("Setting up passthrough for other urls");
+					var passThroughRegex = new RegExp('/');
+					$httpBackend.whenGET(passThroughRegex).passThrough();
+				});
+			} else {
+				console.log("Setting up passthrough for other urls");
+				var passThroughRegex = new RegExp('/');
+				$httpBackend.whenGET(passThroughRegex).passThrough();			
+				$httpBackend.whenPOST(passThroughRegex).passThrough();
+				$httpBackend.whenPUT(passThroughRegex).passThrough();
+				$httpBackend.whenDELETE(passThroughRegex).passThrough();
+			}
+		}
+	}	
+}];
+							</code>
+						</pre>
+					</section>
 				</section>
-
+				
+				<section>
+					<h3>2-way binding</h3>
+					<aside data-markdown class="notes">
+						- Explain how other frameworks e.g knockout.js binds only from model to view
+					</aside>
+					<section>
+						<span class="fragment">
+							<img data-src="images/One_Way_Data_Binding.png" />
+						</span>
+					</section>
+					<section>
+						<img data-src="images/Two_Way_Data_Binding.png" />
+					</section>
+				</section>
+					
 				<section>
 					<h2>Should you migrate to AngularJS</h2>
+					<aside data-markdown class="notes">
+						- Tony talks about advantages of AngularJS vs JSP/GWT
+					</aside>
 					<section>
 						<h3>Effort vs Benefit</h3>
 						<h3>Collaboration</h3>
 						<h3>Future Proof</h3>
 					</section>
-					<aside class="notes">
-						Tony talks about advantages of AngularJS vs JSP/GWT
-					</aside>
 				</section>
 				<section>
 					<section>
