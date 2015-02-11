@@ -63,9 +63,6 @@
 					<section>
 						<p>Our Challenge: How do you get designers and developers remotely located to work together to revamp the familiar PetClinic app?</p>
 					</section>
-					<section>
-						<p>We will share our experiences of using Bootstrap / AngularJS with Spring from a designer and developer's point of view</p>
-					</section>
 				</section>
 
 				<section>
@@ -80,7 +77,7 @@
 						</ul>
 					</section>
 					<aside class="notes">
-						Han talks about how we work together and AngularJS
+						Explain how we made use of tools like Whatsapp and Github webhooks to communicate changes to each other
 					</aside>
 				</section>
 
@@ -215,28 +212,71 @@
 						<ul>
 							<li class="fragment">HTML-like syntax means design is portable</li>
 							<li class="fragment">Directives enable us to provide powerful tools for web designers</li>
-							<li class="fragment">Familiar MVC model for Spring developers</li>
+							<li class="fragment">Familiar DI and MVC model for Spring developers</li>
 							<li class="fragment">Demarcation of UI development and backend RESTful services provided by Spring</li>
 							<li class="fragment">Testability</li>
 						</ul>
 					</section>
 					<section>
 						<h3>HTML syntax means design is portable</h3>
+						<aside class="notes">
+							If we are not using custom directives with name changes, the templates for AngularJS is essentially HTML
+						</aside>
 					</section>
-					<section>
-						<h3>Directives</h3>
-					</section>
-					<section>
-						<h3>MVC model</h3>
-					</section>
-					<section>
-						<h3>Demarcation of responsibilities between UI development and RESTful backend</h3>
-					</section>
-					<section>
-						<h3>Testability</h3>
-					</section>
+				</section>
+
+				<section>
+					<h3>Directives</h3>
 					<aside class="notes">
-						Explain the reasons for choosing our AngularJS in our layout design
+						Directives allow us to define our own domain-specific language for the UI
+					</aside>
+					<section>
+						<pre class="fragment">
+							<code>
+app.directive('scrollToTarget', function() {
+	return function(scope, element) {
+		element.bind('click', function() {
+			angular.element('html, body').stop().animate({
+				scrollTop: angular.element(angular.element(element).attr('href')).offset().top - 20
+				}, 1500); 
+			return false;
+		});
+	};
+});		      
+							</code>
+						</pre>
+						<pre class="fragment">
+							<code>
+<div class="jumbotron-headline-cell">
+	<h1>Pet care for the People who love them</h1>
+    <p>PetClinic is here to enhance people's relationships with their pets</p>
+    <p><a class="btn btn-primary btn-lg" data-scroll-to-target href="#contact-us" role="button">Learn more</a></p>
+</div>  
+							</code>
+						</pre>	
+					</section>
+				</section>
+				<section>
+					<h3>MVC model && Dependency Injection</h3>
+					<aside class="notes">
+						Need to be careful when minifying as AngularJS uses Strings and eval to do Dependency injection
+					</aside>
+				</section>
+				<section>
+					<h3>Demarcation of responsibilities between UI development and RESTful backend</h3>
+					<ul>
+						<li class="fragment">Development in AngularJS can be completely separate from the Spring application</li>
+						<li class="fragment">The API becomes the contract between UI developers and Backend developers</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Testability</h3>
+					<ul>
+						<li class="fragment">Unit tests with Jasmine/Karma</li>
+						<li class="fragment">E2E testing using Protractor</li>
+					</ul>
+					<aside class="notes">
+						AngularJS with DI enables us to test everything easily using Jasmine. E2E testing is provided by Protractor
 					</aside>
 				</section>
 
@@ -354,6 +394,7 @@
 						<h2>On workflow</h2>
 						<ul>
 							<li class="fragment">Push improvements often</li>
+							<li class="fragment">Wireframes are good visual aids to understand flow</li>
 							<li class="fragment">AngularJS allows designers and developers to collaborate easily on projects</li>
 							<li class="fragment">Using a UI framework like Bootstrap helps establish conventions on UI vocabulary</li>
 							<li class="fragment">Developers learn how to layout UIs using Bootstrap as well</li>
@@ -364,9 +405,9 @@
 				<section>
 					<h1>Questions?</h1>
 					<h3>Thank you</h3>
-					<p>http://www.petclinic.com</p>
-					<p>http://www.slides.com</p>
-					<p>http://github.com</p>
+					<p>http://petclinic.hopto.org/petclinic</p>
+					<p>http://slides.com/andrewabogado/deck#/</p>
+					<p>https://github.com/singularity-sg/spring-petclinic</p>
 				</section>
 			</div>
 		</div>
