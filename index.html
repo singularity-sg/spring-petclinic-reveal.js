@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/petclinic.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -37,33 +37,45 @@
 	<body>
 
 		<div class="reveal">
-
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
+				<section data-background="images/1.jpg">
 					<h1>Improving communications between Design and Development</h1>
-					<h3>with Bootstrap/AngularJS</h3>
+					<p>with Bootstrap & AngularJS</p>
 					<p>
-						<small>By <a href="">Andrew Abogado</a> / <a href="">Tony Nguyen</a> / <a href="http://singularity-sg.github.io">Lim Han</a></small>
+						<small><a href="https://twitter.com/andrewabogado" target="_blank" class="highlight">Andrew Abogado</a> <a href="https://twitter.com/sgdevblog" target="_blank" class="highlight">Tony Nguyen</a> <a href="http://singularity-sg.github.io" target="_blank" class="highlight">Lim Han</a></small>
 					</p>
 				</section>
 
 				<section>
-					<h2>Introduction</h2>
 					<section>
-						<h3>Andrew Abogado</h3>
-						<p>UI Designer/Developer</p>
-						<small>Viki, Global TV site powered by fans</small>
+						<h1>Introduction</h1>
 					</section>
 					<section>
-						<h3>Tony Nguyen / Lim Han</h3>
-						<p>Agile Developers<p>
-						<small>WDS, A Xerox Company</small>
+						<table width="100%" class="table-noborder">
+							<thead>
+								<tr>
+									<th>Andrew Abogado</th>
+									<th>Tony Nguyen & Lim Han</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="role">
+									<td>UI Designer/Developer</td>
+									<td>Agile Developers</td>
+								</tr>
+								<tr class="company">
+									<td>Viki, Global TV site powered by fans</td>
+									<td>WDS, A Xerox Company</td>
+								</tr><tr>
+							</tr></tbody>
+						</table>
 					</section>
 					<section>
-						<div>Our Challenge: How do you get designers and developers remotely located to work together to revamp the familiar PetClinic app?</div>
+						<h2>Our Challenge</h2>
+						<p><strong>How do you get designers and developers remotely located to work together to revamp the familiar PetClinic app?</strong></p>
 						<p class="fragment">
-							<small>Disclaimer : This is not an AngularJS or Bootstrap tutorial</small>
+							<small class="highlight">Disclaimer: This is not an AngularJS or Bootstrap tutorial</small>
 						</p>
 						<aside data-markdown class="notes">
 							 - Talk about how we were invited by Michael to work together on the UI using Petclinic as a baseline
@@ -72,8 +84,8 @@
 				</section>
 
 				<section>
-					<h2>Collaboration Tools</h2>
 					<section>
+						<h1>Collaboration Tools</h1>
 						<ul>
 							<li class="fragment">Whatsapp</li>
 							<li class="fragment">GitHub (and email notifications)</li>
@@ -81,9 +93,6 @@
 							<li class="fragment">Sketches, Wireframe, Mock-ups</li>
 						</ul>
        				</section>
-          			<section>
-	            		<img class="stretch" data-src="images/wireframe-flow.png"/>
-	          		</section>
 	          		<aside class="notes" data-markdown>
 			           - Could use Slack in place of Whatsapp
 			           - Use of GitHub Webhooks to trigger notifications
@@ -92,94 +101,122 @@
 
 				<section>
 					<section>
-						<h2>UI/UX Stages</h2>
-						<ol>
-							<li class="fragment">Discover</li>
-							<li class="fragment">Define</li>
-							<li class="fragment">Develop</li>
-							<li class="fragment">Deliver</li>
-						</ol>
+						<h1>Design Stages</h1>
+						<span class="fragment highlight">Discover</span>
+						<span class="fragment highlight">Define</span>
+						<span class="fragment highlight">Develop</span>
+						<span class="fragment highlight">Deliver</span>
 					</section>
-					<section>
-						<h2>Discovery</h2>
-						<aside data-markdown class="notes">
-							- On on meeting, Michael shared the demo app. Han and Tony converted to us Spring & AngularJS created a repo. We met again
-							- Show WhatsApp convo
-							- Requirements, researched use case and core needs of the app
-							- Researched and gather information
-							- Site review (screenshot of the Petclinic)
-							- Use Case (link to the existing use case)
-						</aside>
-					</section>
-					<section>
-						<h2>Define</h2>
-						<aside data-markdown class="notes">
-							- Define hierarchy of requirements (epicenter design) pick core goals of the design
-							- Initial sitemap & wireframe (show initial wireframe)
-							- Detailed sitemap and interaction flow (to communicate with developers better) (show wireflow)
-						</aside>
-					</section>
-					<section>
-						<h2>Develop</h2>
-						<aside data-markdown class="notes">
-							- Sketching (low fidelity wireframes) (show succeeding wireframes)
-							- Design a detailed mock (talk about design elements, attached mockups - branding: https://dribbble.com/branding)
-							- Develop UI interaction and prototype on Bootstrap right away
-							- Touch a bit with the process from Bootstrap - Angular JS - Spring. devs worked
-								Angularizing the Bootstrap markup
-						</aside>
-					</section>
-					<section>
-						<h2>Deliver</h2>
-						<aside data-markdown class="notes">
-							- Do it on the development environment then push to repo
-						</aside>
-					</section>
-				</section>
 
-				<section>
-					<h2>Design walk through</h2>
-				</section>
-				<section>
-					<h2>Existing design vs. New design</h2>
-					<p><small>Quick comparison</small></p>
-					<aside data-markdown class="notes">
-						- Talk on Existing design and flaws
-						- Improvements on New design:
-							- View a list of veterinarians, pet owners, and pets.
-							- How we present this is like a Dashboard.
-							- The greeting part could be one off. Or could be informative. Like it could post alerts or just ask how's your day.
-							- The core goal for the design is viewing. So we present it in a way that the layout isn't strenuous to the eyes, that is making everything in a tabular data. And it's group in a manner where you can easily browse or scan owners, pets, and veterinarians.
-							- Search has been added on a global nav so it's easily findable
-							- Ability to add owner at any point in the page the users are.
-							- Ability to access on various devices (smartphone, tablet, and desktop browsers)
-					</aside>
-				</section>
-								
-				<section>
+					<section data-background="images/2.jpg">
+						<h1 class="highlight">Discover</h1>
+					</section>
+					<section data-background="images/6.png">
+						<aside data-markdown class="notes">
+							- On on meeting, Michael shared the demo app. Han and Tony converted to us Spring & AngularJS created a repo. 
+							- I quick came up a sketch afterwards.
+							- Early Sketch and Wireframe
+						</aside>
+					</section>
 					<section>
-						<h2>Bootstrap</h2>
-						<p>UI framework</p>
+						<img class="stretch" data-src="images/7.jpg"/>
+						<p>Early Sketch and Wireframe</p>
+						<aside data-markdown class="notes">
+							- Came up with early Sketch and Wireframe
+							- Tony, Han, & I met again to have a supposed kick-off meeting. 
+							  So I thought it'd be great to show the wireframe and sitemap. 
+							  So we decided to what's our communication tool? Han said, let's use WhatsApp.
+							- Been searching around if there are sample pet clinics application coz I feel the flow that I've suggested to Han and Tony wasn't that good.
+							- So I've gather information & researched use case and core needs of the app. And ended up with this? 
+							- Hallelueia!
+						</aside>
+					</section>
+
+					<section data-background="images/3.jpg">
+						<h1 class="highlight">Define</h1>
+					</section>
+	      			<section data-background="images/9.png">
+						<aside data-markdown class="notes">
+							- Detailed sitemap and interaction flow to communicate with developers better. Shared to Tony and Han.
+							- Define hierarchy of requirements (epicenter design) pick core goals of the design.
+						</aside>
+	          		</section>
+	      			<section data-background="#fff">
+	            		<img class="stretch" data-src="images/10.png"/>
+	            	</section>
+	            	<section data-background="#fff">
+	            		<img class="stretch" data-src="images/11.png"/>
+	            	</section>
+	          		<section>
+	          			<h2>On Flow and Core features</h2>
+	          			<span>Landing.</span>
+	          			<span>Viewing.</span>
+	          			<span>Searching.</span>
+	          			<span>Adding.</span>
+						<aside data-markdown class="notes">
+							- Detailed sitemap and interaction flow to communicate with developers better
+							- Define hierarchy of requirements (epicenter design) pick core goals of the design. We decided to go with Landing, 
+						</aside>
+	          		</section>
+
+					<section data-background="images/4.jpg">
+						<h1 class="highlight">Develop</h1>
+						<aside data-markdown class="notes">
+							- Sketch, Low Fidelity, Prototype (with Bootstrap)
+							- Sketching (low fidelity wireframes) (show succeeding wireframes)
+							- Design a detailed mock (talk about design elements, attached mockups - Branding: https://dribbble.com/branding)
+							- Develop UI interaction and prototype on Bootstrap right away
+						</aside>
+					</section>
+					<section>
+	            		<h2>Sketch</h2>
+	            	</section>
+	            	<section>
+	            		<img class="stretch" data-src="images/12_a.jpg"/>
+	            	</section>
+	            	<section>
+	            		<img class="stretch" data-src="images/12_b.jpg"/>
+	            	</section>
+	            	<section>
+	            		<img class="stretch" data-src="images/12_c.jpg"/>
+	            	</section>
+	            	<section>
+	            		<img class="stretch" data-src="images/12_d.jpg"/>
+	            	</section>
+	            	<section>
+	            		<h2>Branding</h2>
+	            	</section>
+	            	<section>
+	            		<img class="stretch" data-src="images/13.png"/>
+	            	</section>
+	            	<section>
+	            		<h2>Mock-ups</h2>
+	            	</section>
+	            	<section>
+	            		<img class="stretch" data-src="images/14_a.png"/>
+	            	</section>
+	            	<section>
+	            		<img class="stretch" data-src="images/14_b.png"/>
+	            	</section>
+	            	<section>
+	            		<h2>Prototype</h2>
+	            		Bootstrap (UI Framework) + Grunt (Task Runner)
+	            	</section>
+					<section>
+						<h3>Bootstrap Pros</h3>
+						<ul>
+							<li class="fragment">Quick start to all skill levels</li>
+							<li class="fragment">Robust UI system (layout grid, typography, components)</li>
+							<li class="fragment">Consistent design language a standard for the team</li>
+							<li class="fragment">Cross Everything (Supports major browser on various devices)</li>
+							<li class="fragment">and more...</li>
+						</ul>
 						<aside data-markdown class="notes">
 							- Let see a quick show of hands?
 							- That's so 3 years ago. You probably have opinions with it already
 							- huge support community behind it
 							- Adds structure and style to their sites and get them up and running quickly
-						</aside>
-					</section>
-					<section>
-						<h2>Pros</h2>
-						<ul>
-							<li class="fragment">The Most Popular HTML, CSS, JS Framework</li>
-							<li class="fragment">Quick start to all skill levels</li>
-							<li class="fragment">Robust UI system (layout grid, typography, components)</li>
-							<li class="fragment">Consistent design language a standard for the team</li>
-							<li class="fragment">Cross Everything (Supports major browser on various devices)</li>
-							<li class="fragment">Rich documentation</li>
-							<li class="fragment">Open Source & Community</li>
-							<li class="fragment">Available of plugins & themes both free and paid</li>
-						</ul>
-						<aside data-markdown class="notes">
+
 							1. Show Github popularity and Google Trends)
 							2. Low barrier to entry. Familiarity to HTML and CSS for designers and developers helps
 							3. Structured Grid System, Typography, Reusable components
@@ -200,7 +237,7 @@
 						</blockquote>
 					</section>
 					<section>
-						<h2>Cons</h2>
+						<h3>Cons</h3>
 						<ul>
 							<li class="fragment">Could result to conflicts with existing code</li>
 							<li class="fragment">Generic design (all websites look almost the same if it's not customize accordingly)</li>
@@ -213,10 +250,76 @@
 							3. It looks like Bootstrap, and you won't get the precise control over layout that some designers want, assuming you have a designer involved.
 						</aside>
 					</section>
+
+					<section data-background="images/5.jpg">
+						<h1>Deliver</h1>
+					</section>
+					<section>
+						<h2>Communicate Decisions</h2>
+					</section>
+					<section>
+						<img class="stretch" data-src="images/15.png"/>
+					</section>
+					<section>
+						<img class="stretch" data-src="images/16.png"/>
+					</section>
+					<section>
+						<h2>Implement</h2>
+						<ul>
+							<li>Share updated mock-ups</li>
+							<li>Push code often; Leave a note of the changes</li>
+							<li>Designing back and forth on the browser and Photoshop</li>
+							<li>Bootstrap markup's Angularized</li>
+						</ul>
+						<aside data-markdown class="notes">
+							- Touch a bit with the process from Bootstrap - Angular JS - Spring. devs worked
+							- When Bootstrap is Angularized and make the app run, it feels so much better than just looking at a static image.
+						</aside>
+					</section>
 				</section>
 
 				<section>
-					<h2>Why AngularJS ?</h2>
+					<section>
+						<h1>A comparison</h1>
+						<p>
+							<span class="fragment">
+								<span class="highlight">Existing</span> vs.
+							</span>
+							<span class="highlight fragment">New</span>
+						</p>
+					</section>
+					<section data-background="images/17.png">
+					</section>
+					<section>
+						<h2>Improvements</h3>
+						<ul>
+							<li class="fragment">Better navigation flow</li>
+							<li class="fragment">Wider layout (renders well on various devices)</li>
+							<li class="fragment">Overview for recently added owners, pets, and veterinarians</li>
+							<li class="fragment">Cards instead of table results for better scanability</li>
+							<li class="fragment">Search and add functionality are exposed globally</li>
+						</ul>
+						<aside data-markdown class="notes">
+							- Talk on Existing design and flaws
+							- Improvements on New design:
+								- View a list of veterinarians, pet owners, and pets.
+								- How we present this is like a Dashboard.
+								- The greeting part could be one off. Or could be informative. Like it could post alerts or just ask how's your day.
+								- The core goal for the design is viewing. So we present it in a way that the layout isn't strenuous to the eyes, that is making everything in a tabular data. And it's group in a manner where you can easily browse or scan owners, pets, and veterinarians.
+								- Search has been added on a global nav so it's easily findable
+								- Ability to add owner at any point in the page the users are.
+								- Ability to access on various devices (smartphone, tablet, and desktop browsers)
+						</aside>
+					</section>
+					<section>
+						<h2>Demo</h3>
+						<p><a href="http://petclinic.hopto.org/petclinic" class="highlight" target="_blank">http://petclinic.hopto.org/petclinic</a>
+						</p>
+					</section>
+				</section>
+				
+				<section>
+					<h1>Why AngularJS ?</h1>
 					<aside data-markdown class="notes">
 						- HTML-like syntax means design is portable.
 						- Directives are powerful
@@ -228,7 +331,7 @@
 				</section>
 					
 				<section>
-					<h3>1. HTML-like syntax means design is portable</h3>
+					<h2>1. HTML-like syntax means design is portable</h2>
 					<aside data-markdown class="notes">
 						- If we are not using custom directives with name changes, the templates for AngularJS is essentially HTML
 						- Also, try not to use {{ }} within the template. Use ng-bind instead.
@@ -236,7 +339,7 @@
 				</section>
 					
 				<section>
-					<h3>2. Directives</h3>
+					<h2>2. Directives</h2>
 					<aside data-markdown class="notes">
 						- Demo the use of the scroll-to-target directive
 					</aside>
@@ -277,7 +380,7 @@ app.directive('scrollToTarget', function() {
 				</section>
 					
 				<section>
-					<h3>3. MVC model && Dependency Injection</h3>
+					<h2>3. MVC model && Dependency Injection</h2>
 					<aside data-markdown class="notes">
 						- Need to be careful when minifying as AngularJS uses Strings and eval to do Dependency injection
 						- Show examples of Dependency Injection briefly
@@ -346,7 +449,7 @@ var PetController = ['$scope', 'Pet', function($scope, Pet) {
 				</section>
 					
 				<section>
-					<h3>5. Testability</h3>
+					<h2>5. Testability</h2>
 					<aside data-markdown class="notes">
 						- AngularJS with DI enables us to test everything easily using Jasmine. 
 						- E2E testing is provided by Protractor
@@ -412,7 +515,7 @@ var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBacke
 				</section>
 				
 				<section>
-					<h3>2-way binding</h3>
+					<h2>2-way binding</h2>
 					<aside data-markdown class="notes">
 						- Explain how other frameworks e.g knockout.js binds only from model to view
 					</aside>
@@ -427,15 +530,13 @@ var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBacke
 				</section>
 					
 				<section>
-					<h2>Should you migrate to AngularJS</h2>
+					<h1>Should you migrate to AngularJS</h1>
+					<span class="highlight fragment">Effort vs Benefit</span>
+					<span class="highlight fragment">Collaboration</span>
+					<span class="highlight fragment">Future Proof</span>
 					<aside data-markdown class="notes">
 						- Tony talks about advantages of AngularJS vs JSP/GWT
 					</aside>
-					<section>
-						<h3>Effort vs Benefit</h3>
-						<h3>Collaboration</h3>
-						<h3>Future Proof</h3>
-					</section>
 				</section>
 				<section>
 					<section>
@@ -446,7 +547,7 @@ var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBacke
 						</ul>
 					</section>
 					<section>
-						<h3>Learning Curve</h3>
+						<h2>Learning Curve</h2>
 						<ul>
 							<li class="fragment">Very well documented (even has AngularJs song)</li>
 							<li class="fragment">Fast to build HelloWorld application</li>
@@ -458,7 +559,7 @@ var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBacke
 						</ul>
 					</section>
 					<section>
-						<h3>General Pros & Cons</h3>
+						<h2>General Pros & Cons</h2>
 						<ul>
 							<li class="fragment">Medium sizes (angular.js < 1MB)</li>
 							<li class="fragment">Modules size vary from 6kb to ~100kb (without obfuscation)</li>
@@ -470,7 +571,7 @@ var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBacke
 						</ul>
 					</section>
 					<section>
-						<h3>Compare with Jsp</h3>
+						<h2>Compare with Jsp</h2>
 						<ul>
 							<li class="fragment">Loose coupling is the way to go: Angular Webapp access Restful server (which can be Java or .NET)</li>
 							<li class="fragment">Client-side scripting is a safer investment</li>
@@ -483,7 +584,7 @@ var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBacke
 						</ul>
 					</section>
 					<section>
-						<h3>Compare with jQuery + native Javascript</h3>
+						<h2>Compare with jQuery + native Javascript</h2>
 						<ul>
 							<li class="fragment">Scope is a plus</li>
 							<li class="fragment">Pre-defined project structure</li>
@@ -494,7 +595,7 @@ var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBacke
 						</ul>
 					</section>
 					<section>
-						<h3>Compare with Gwt</h2>
+						<h2>Compare with Gwt</h2>
 						<ul>
 							<li class="fragment">Readability</li>
 							<li class="fragment">Ability to run without server</li>
@@ -505,14 +606,14 @@ var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBacke
 					</section>
 				</section>
 				<section>
-					<h2>Collaboration</h2>
+					<h1>Collaboration</h1>
 					<ul>
 						<li class="fragment">Angularised page still look very similar to original template. Designer can work on real webapp</li>
 						<li class="fragment">Angular integrate well wit Bootstrap and jQuery</li>
 					</ul>
 				</section>
 				<section>
-					<h2>Future Proof</h2>
+					<h1>Future Proof</h1>
 					<ul>
 						<li class="fragment">Big Community</li>
 						<li class="fragment">Angular module and directive acting like Apache Common</li>
@@ -525,7 +626,7 @@ var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBacke
 				</section>
 				<section>
 					<section>
-						<h2>Conclusion</h2>
+						<h1>Conclusion</h1>
 					</section>
 					<section>
 						<h2>On collaboration</h2>
@@ -548,12 +649,15 @@ var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBacke
 						</ul>
 					</section>
 				</section>
-				<section>
-					<h1>Questions?</h1>
-					<h3>Thank you</h3>
-					<p>http://petclinic.hopto.org/petclinic</p>
-					<p>http://slides.com/andrewabogado/deck#/</p>
-					<p>https://github.com/singularity-sg/spring-petclinic</p>
+				<section data-background="images/1.jpg">
+					<h1>Thank you!</h1>
+					<p>
+						<small><a href="http://petclinic.hopto.org/petclinic" class="alt" target="_blank">http://petclinic.hopto.org/petclinic</a></small><br>
+						<small><a href="https://github.com/singularity-sg/spring-petclinic" class="alt" target="_blank">https://github.com/singularity-sg/spring-petclinic</a></small>
+					</p>
+					<p>
+						<small><a href="https://twitter.com/andrewabogado" target="_blank" class="highlight">Andrew Abogado</a> <a href="https://twitter.com/sgdevblog" target="_blank" class="highlight">Tony Nguyen</a> <a href="http://singularity-sg.github.io" target="_blank" class="highlight">Lim Han</a></small>
+					</p>
 				</section>
 			</div>
 		</div>
