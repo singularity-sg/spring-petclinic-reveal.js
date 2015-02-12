@@ -113,7 +113,7 @@
 					</section>
 					<section data-background="images/6.png">
 						<aside data-markdown class="notes">
-							- On on meeting, Michael shared the demo app. Han and Tony converted to us Spring & AngularJS created a repo. 
+							- On on meeting, Michael shared the demo app. Han and Tony converted to us Spring & AngularJS created a repo.
 							- I quick came up a sketch afterwards.
 							- Early Sketch and Wireframe
 						</aside>
@@ -123,11 +123,11 @@
 						<p>Early Sketch and Wireframe</p>
 						<aside data-markdown class="notes">
 							- Came up with early Sketch and Wireframe
-							- Tony, Han, & I met again to have a supposed kick-off meeting. 
-							  So I thought it'd be great to show the wireframe and sitemap. 
+							- Tony, Han, & I met again to have a supposed kick-off meeting.
+							  So I thought it'd be great to show the wireframe and sitemap.
 							  So we decided to what's our communication tool? Han said, let's use WhatsApp.
 							- Been searching around if there are sample pet clinics application coz I feel the flow that I've suggested to Han and Tony wasn't that good.
-							- So I've gather information & researched use case and core needs of the app. And ended up with this? 
+							- So I've gather information & researched use case and core needs of the app. And ended up with this?
 							- Hallelueia!
 						</aside>
 					</section>
@@ -155,12 +155,38 @@
 	          			<span>Adding.</span>
 						<aside data-markdown class="notes">
 							- Detailed sitemap and interaction flow to communicate with developers better
-							- Define hierarchy of requirements (epicenter design) pick core goals of the design. We decided to go with Landing, 
+							- Define hierarchy of requirements (epicenter design) pick core goals of the design. We decided to go with Landing,
 						</aside>
 	          		</section>
 
+<<<<<<< Updated upstream
 					<section data-background="images/4.jpg">
 						<h1 class="highlight">Develop</h1>
+=======
+				<section>
+					<h2>Design walk through</h2>
+				</section>
+				<section>
+					<h2>Existing design vs. New design</h2>
+					<p><small>Quick comparison</small></p>
+					<aside data-markdown class="notes">
+						- Talk on Existing design and flaws
+						- Improvements on New design:
+							- View a list of veterinarians, pet owners, and pets.
+							- How we present this is like a Dashboard.
+							- The greeting part could be one off. Or could be informative. Like it could post alerts or just ask how's your day.
+							- The core goal for the design is viewing. So we present it in a way that the layout isn't strenuous to the eyes, that is making everything in a tabular data. And it's group in a manner where you can easily browse or scan owners, pets, and veterinarians.
+							- Search has been added on a global nav so it's easily findable
+							- Ability to add owner at any point in the page the users are.
+							- Ability to access on various devices (smartphone, tablet, and desktop browsers)
+					</aside>
+				</section>
+
+				<section>
+					<section>
+						<h2>Bootstrap</h2>
+						<p>UI framework</p>
+>>>>>>> Stashed changes
 						<aside data-markdown class="notes">
 							- Sketch, Low Fidelity, Prototype (with Bootstrap)
 							- Sketching (low fidelity wireframes) (show succeeding wireframes)
@@ -317,7 +343,7 @@
 						</p>
 					</section>
 				</section>
-				
+
 				<section>
 					<h1>Why AngularJS ?</h1>
 					<aside data-markdown class="notes">
@@ -329,7 +355,7 @@
 						- 2-way binding
 					</aside>
 				</section>
-					
+
 				<section>
 					<h2>1. HTML-like syntax means design is portable</h2>
 					<aside data-markdown class="notes">
@@ -337,7 +363,7 @@
 						- Also, try not to use {{ }} within the template. Use ng-bind instead.
 					</aside>
 				</section>
-					
+
 				<section>
 					<h2>2. Directives</h2>
 					<aside data-markdown class="notes">
@@ -354,15 +380,15 @@ app.directive('scrollToTarget', function() {
 		element.bind('click', function() {
 			angular.element('html, body').stop().animate({
 				scrollTop: angular.element(angular.element(element).attr('href')).offset().top - 20
-				}, 1500); 
+				}, 1500);
 			return false;
 		});
 	};
-});		      
+});
 							</code>
 						</pre>
 					</section>
-					
+
 					<section>
 						<aside class="notes" data-markdown>
 							- Sample directive usage on the template
@@ -373,12 +399,12 @@ app.directive('scrollToTarget', function() {
 	<h1>Pet care for the People who love them</h1>
     <p>PetClinic is here to enhance people's relationships with their pets</p>
     <p><a class="btn btn-primary btn-lg" data-scroll-to-target href="#contact-us" role="button">Learn more</a></p>
-</div>  
+</div>
 							</code>
-						</pre>	
+						</pre>
 					</section>
 				</section>
-					
+
 				<section>
 					<h2>3. MVC model && Dependency Injection</h2>
 					<aside data-markdown class="notes">
@@ -388,7 +414,7 @@ app.directive('scrollToTarget', function() {
 					<section>
 						<aside class="notes" data-markdown>
 							- A typical model in an AngularJS app
-						</aside>	
+						</aside>
 						<pre class="fragment">
 							<code>
 var Pet = ['$resource','context', function($resource, context) {
@@ -400,7 +426,7 @@ var Pet = ['$resource','context', function($resource, context) {
 					<section>
 						<aside class="notes" data-markdown>
 							- A typical controller in an AngularJS app
-						</aside>					
+						</aside>
 						<pre>
 							<code>
 var PetController = ['$scope', 'Pet', function($scope, Pet) {
@@ -434,7 +460,7 @@ var PetController = ['$scope', 'Pet', function($scope, Pet) {
 						</pre>
 					</section>
 				</section>
-					
+
 				<section>
 					<h3>4. Demarcation of responsibilities between UI development and RESTful backend</h3>
 					<aside data-markdown class="notes">
@@ -447,11 +473,11 @@ var PetController = ['$scope', 'Pet', function($scope, Pet) {
 						<li class="fragment">Application naturally adopts a client-server architecture which encourages reuse of services</li>
 					</ul>
 				</section>
-					
+
 				<section>
 					<h2>5. Testability</h2>
 					<aside data-markdown class="notes">
-						- AngularJS with DI enables us to test everything easily using Jasmine. 
+						- AngularJS with DI enables us to test everything easily using Jasmine.
 						- E2E testing is provided by Protractor
 						- Demonstrate use of mocking data for designers
 					</aside>
@@ -462,18 +488,18 @@ var PetController = ['$scope', 'Pet', function($scope, Pet) {
 							<li class="fragment">E2E testing using Protractor</li>
 						</ul>
 					</section>
-					
+
 					<section>
-						
+
 						<pre>
 							<code>
 var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBackend, $http, $q, context) {
 	return {
 		mock : function(useMockData) {
-			
+
 			var passThroughRegex = new RegExp('/static/mock-data/|components/');
-			$httpBackend.whenGET(passThroughRegex).passThrough();	
-			
+			$httpBackend.whenGET(passThroughRegex).passThrough();
+
 			if(useMockData) {
 				$q.defer();
 				$q.all([
@@ -493,7 +519,7 @@ var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBacke
 					$httpBackend.whenGET(context + '/api/owners/1').respond(data[3].data);
 					console.log("Mocking /api/pets/types");
 					$httpBackend.whenGET(context + '/api/pets/types').respond(data[4].data);
-					
+
 					console.log("Setting up passthrough for other urls");
 					var passThroughRegex = new RegExp('/');
 					$httpBackend.whenGET(passThroughRegex).passThrough();
@@ -501,19 +527,19 @@ var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBacke
 			} else {
 				console.log("Setting up passthrough for other urls");
 				var passThroughRegex = new RegExp('/');
-				$httpBackend.whenGET(passThroughRegex).passThrough();			
+				$httpBackend.whenGET(passThroughRegex).passThrough();
 				$httpBackend.whenPOST(passThroughRegex).passThrough();
 				$httpBackend.whenPUT(passThroughRegex).passThrough();
 				$httpBackend.whenDELETE(passThroughRegex).passThrough();
 			}
 		}
-	}	
+	}
 }];
 							</code>
 						</pre>
 					</section>
 				</section>
-				
+
 				<section>
 					<h2>2-way binding</h2>
 					<aside data-markdown class="notes">
@@ -528,7 +554,7 @@ var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBacke
 						<img data-src="images/Two_Way_Data_Binding.png" />
 					</section>
 				</section>
-					
+
 				<section>
 					<h1>Should you migrate to AngularJS</h1>
 					<span class="highlight fragment">Effort vs Benefit</span>
@@ -549,13 +575,13 @@ var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBacke
 					<section>
 						<h2>Learning Curve</h2>
 						<ul>
-							<li class="fragment">Very well documented (even has AngularJs song)</li>
-							<li class="fragment">Fast to build HelloWorld application</li>
+							<li class="fragment">Very well documented (<a href="http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro">even has AngularJs song</a>)</li>
 							<li class="fragment">Easy to learn basic concepts like controller, route, view, binding</li>
-							<li class="fragment">Directive is easy to use (Andrew can use it)</li>
-							<li class="fragment">If you want to pass objects around then need to pick up concepts like scope, rootscope,...</li>
+							<li class="fragment">Fast to build HelloWorld application</li>
+							<li class="fragment">Directive is easy to use (Designer can use it)</li>
+							<li class="fragment">It is harder to pick up advance concepts like scope, custom directive,...</li>
 							<li class="fragment">Need to learn Angular way of testing</li>
-							<li class="fragment">Directive is hard to read and hard to write</li>
+							<li class="fragment">Directive is easy to use but hard to learn</li>
 						</ul>
 					</section>
 					<section>
@@ -564,22 +590,96 @@ var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBacke
 							<li class="fragment">Medium sizes (angular.js < 1MB)</li>
 							<li class="fragment">Modules size vary from 6kb to ~100kb (without obfuscation)</li>
 							<li class="fragment">Easy to use alone but may take extra effort to integrate with third-party js libraries</li>
-							<li class="fragment">The more directives you have, the smaller is the code base</li>
+							<li class="fragment">2-way binding makes code base smaller</li>
 							<li class="fragment">Clean project structure</li>
-							<li class="fragment">2-way binding is good</li>
+							<li class="fragment">Directive serve as another abstraction layer</li>
 							<li class="fragment">Quite responsive</li>
 						</ul>
 					</section>
+						<h3>How hard to write a directive</h3>
+						<pre>
+							<code>
+angular.module('moduleName')
+    .directive('myDirective', function () {
+    return {
+        restrict: 'EA', //E = element, A = attribute, C = class, M = comment
+        scope: {
+            //@ reads the attribute value, = provides two-way binding, & works with functions
+            title: '@'         },
+        template: '<div>{{ myVal }}</div>',
+        templateUrl: 'mytemplate.html',
+        controller: controllerFunction, //Embed a custom controller in the directive
+        link: function ($scope, element, attrs) { } //DOM manipulation
+    }
+});
+							</code>
+						</pre>
+					</section>
 					<section>
-						<h2>Compare with Jsp</h2>
+						<h3>One simple directive for mouse-over effect</h3>
+						<aside data-markdown class="notes">
+							- Example from Dan Wahlin
+						</aside>
+						<pre>
+							<code>
+app.directive('myDomDirective', function () {
+    return {
+        link: function ($scope, element, attrs) {
+            element.bind('click', function () {
+                element.html('You clicked me!');
+            });
+            element.bind('mouseenter', function () {
+                element.css('background-color', 'yellow');
+            });
+            element.bind('mouseleave', function () {
+                element.css('background-color', 'white');
+            });
+        }
+    };
+});
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h3>Directive is easy to use</h3>
+						<pre>
+							<code>
+<div my-dom-directive>Click Me!</div>
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h3>Advantage</h3>
+						<aside data-markdown class="notes">
+							- Merely about technical aspect
+						</aside>
+					<section>
+						<h3>Integration issue</h3>
 						<ul>
-							<li class="fragment">Loose coupling is the way to go: Angular Webapp access Restful server (which can be Java or .NET)</li>
+							<li class="fragment">It may be tough to integrate non-Angular elements into Angular app</li>
+							<li class="fragment">Use Angular to load a document and use ckEditor to convert the enclosing div to html editor</li>
+							<li class="fragment">How to load the ckEditor only when the binding is completed</li>
+							<li class="fragment">Angularised the ckEditor by creating ckEditor directive</li>
+						</ul>
+					</section>
+					<section>
+						<h3>2-way binding has its limit</h3>
+						<ul>
+							<li class="fragment">How you bind an option to a javascript object</li>
+							<li class="fragment">Caution: controller is not singleton</li>
+							<li class="fragment">May need to pass object around by parent scope or root scope</li>
+							<li class="fragment">Make Angular app stateless by using route parameter <pre><code>url: "/owners/:id",</code></pre></li>
+						</ul>
+					</section>
+					<section>
+						<h3>Compare with Jsp</h3>
+						<ul>
+							<li class="fragment">Loose coupling</li>
 							<li class="fragment">Client-side scripting is a safer investment</li>
-							<li class="fragment">Single page application provide better user experience</li>
+							<li class="fragment">Single page application may provide better user experience</li>
 							<li class="fragment">Developer and Designer can work together on the same source code</li>
-							<li class="fragment">Directive may be equals to jsp tag + javascript</li>
-							<li class="fragment">Can be viewed without server</li>
-							<li class="fragment">May be harder to test if use HtmlUnit or WebUnit</li>
+							<li class="fragment">Directive may replace both jsp tag + javascript</li>
+							<li class="fragment">Can be viewed without application server</li>
 							<li class="fragment">May be harder to integrate with third-party javascript</li>
 						</ul>
 					</section>
@@ -589,7 +689,7 @@ var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBacke
 							<li class="fragment">Scope is a plus</li>
 							<li class="fragment">Pre-defined project structure</li>
 							<li class="fragment">2-way binding save a lot of typing</li>
-							<li class="fragment">Smaller code base and less control</li>
+							<li class="fragment">Smaller code base but less control</li>
 							<li class="fragment">More difficult to integrate with third-pary library, it is better to have equivalent directive</li>
 							<li class="fragment">Directive is easier to read and easier to track compare to registering event</li>
 						</ul>
@@ -686,7 +786,7 @@ var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBacke
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
-			
+
 			// Change a config value at runtime
 			Reveal.configure({ controls: true });
 
