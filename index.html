@@ -472,16 +472,21 @@ var PetController = ['$scope', 'Pet', function($scope, Pet) {
 				</section>
 
 				<section>
-					<h3>4. Demarcation of responsibilities between UI development and RESTful backend</h3>
+					<h3>4. Demarcation of responsibilities</h3>
 					<aside data-markdown class="notes">
 						- Webapp development forces you to adopt a client/server architecture
 						- Benefits include separating your backend services with your client which can be mobile apps / tablets / tv etc..
 					</aside>
-					<ul>
-						<li class="fragment">Development in AngularJS can be completely separate from the Spring application</li>
-						<li class="fragment">The API becomes the contract between UI developers and Backend developers</li>
-						<li class="fragment">Application naturally adopts a client-server architecture which encourages reuse of services</li>
-					</ul>
+					<section>
+						<ul>
+							<li class="fragment">Development in AngularJS can be completely separate from the Spring application</li>
+							<li class="fragment">The API becomes the contract between UI developers and Backend developers</li>
+							<li class="fragment">Application naturally adopts a client-server architecture which encourages reuse of services</li>
+						</ul>
+					</section>
+					<section>
+						<span><img data-src="images/AngularJS-Spring.png" /></span>
+					</section>
 				</section>
 
 				<section>
@@ -551,7 +556,7 @@ var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBacke
 				</section>
 
 				<section>
-					<h2>2-way binding</h2>
+					<h2>6. 2-way binding</h2>
 					<aside data-markdown class="notes">
 						- Explain how other frameworks e.g knockout.js binds only from model to view
 					</aside>
@@ -563,6 +568,11 @@ var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBacke
 					<section>
 						<img data-src="images/Two_Way_Data_Binding.png" />
 					</section>
+				</section>
+				
+				<section>
+					<h2>And there's all these...</h2>
+					<span class="fragment"><img data-src="images/angular-features.png" /></span>
 				</section>
 
 				<section>
@@ -579,6 +589,7 @@ var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBacke
 						<h2>Effort vs Benefit</h2>
 						<ul>
 							<li class="fragment">Learning Curve</li>
+							<li class="fragment">Pros & Cons</li>
 							<li class="fragment">AngularJs compare to jsp, jQuery, GWT?</li>
 						</ul>
 					</section>
@@ -600,7 +611,6 @@ var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBacke
 							<li class="fragment">Medium sizes (angular.js < 1MB)</li>
 							<li class="fragment">Modules size vary from 6kb to ~100kb (without obfuscation)</li>
 							<li class="fragment">Easy to use alone but may take extra effort to integrate with third-party js libraries</li>
-							<li class="fragment">2-way binding makes code base smaller</li>
 							<li class="fragment">Clean project structure</li>
 							<li class="fragment">Directive serve as another abstraction layer</li>
 							<li class="fragment">Quite responsive</li>
@@ -750,6 +760,7 @@ app.directive('myDomDirective', function () {
 							<li class="fragment">Using a UI framework like Bootstrap helps establish conventions on UI vocabulary</li>
 							<li class="fragment">Developers learn how to layout UIs using Bootstrap as well</li>
 							<li class="fragment">We are able to iteratively improve the design without impacting the amount of effort required</li>
+							<li class="fragment">Faster total development time</li>
 						</ul>
 					</section>
 				</section>
