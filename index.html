@@ -364,7 +364,7 @@
     <li data-ng-class="$state.is('pets') ? 'active' : ''"><a data-ui-sref="pets">Pets</a></li>
     <li data-ng-class="$state.is('vets') ? 'active' : ''"><a data-ui-sref="vets">Vets</a></li>
   </ul>
-</div>						
+</div>
 							</code>
 						</pre>
 					</section>
@@ -427,9 +427,9 @@ app.directive('scrollToTarget', function() {
 						</aside>
 						<pre class="fragment">
 							<code>
-								var Pet = ['$resource','context', function($resource, context) {
-									return $resource(context + '/api/pets/:id');
-								}];
+var Pet = ['$resource','context', function($resource, context) {
+	return $resource(context + '/api/pets/:id');
+}];
 							</code>
 						</pre>
 					</section>
@@ -439,15 +439,15 @@ app.directive('scrollToTarget', function() {
 						</aside>
 						<pre>
 							<code>
-								var PetController = ['$scope', 'Pet', function($scope, Pet) {
-									$scope.$on('$viewContentLoaded', function(event){
-										$('html, body').animate({
-												scrollTop: $("#pets").offset().top
-										}, 1000);
-									});
+var PetController = ['$scope', 'Pet', function($scope, Pet) {
+	$scope.$on('$viewContentLoaded', function(event){
+		$('html, body').animate({
+				scrollTop: $("#pets").offset().top
+		}, 1000);
+	});
 
-									$scope.pets = Pet.query();
-								}];
+	$scope.pets = Pet.query();
+}];
 							</code>
 						</pre>
 					</section>
@@ -591,7 +591,7 @@ var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBacke
 							<li class="fragment">Directive is easy to use (Designer can use it)</li>
 							<li class="fragment">It is harder to pick up advance concepts like scope, custom directive,...</li>
 							<li class="fragment">Need to learn Angular way of testing</li>
-							<li class="fragment">Directive is easy to use but hard to learn</li>
+							<li class="fragment">Directive is easy to use but hard to create</li>
 						</ul>
 					</section>
 					<section>
@@ -606,6 +606,7 @@ var MockService = ['$httpBackend', '$http', '$q', 'context', function($httpBacke
 							<li class="fragment">Quite responsive</li>
 						</ul>
 					</section>
+					<section>
 						<h3>How hard to write a directive</h3>
 						<pre>
 							<code>
@@ -659,11 +660,6 @@ app.directive('myDomDirective', function () {
 						</pre>
 					</section>
 					<section>
-						<h3>Advantage</h3>
-						<aside data-markdown class="notes">
-							- Merely about technical aspect
-						</aside>
-					<section>
 						<h3>Integration issue</h3>
 						<ul>
 							<li class="fragment">It may be tough to integrate non-Angular elements into Angular app</li>
@@ -675,7 +671,7 @@ app.directive('myDomDirective', function () {
 					<section>
 						<h3>2-way binding has its limit</h3>
 						<ul>
-							<li class="fragment">How you bind an option to a javascript object</li>
+							<li class="fragment">How to bind the value of an option to an  object</li>
 							<li class="fragment">Caution: controller is not singleton</li>
 							<li class="fragment">May need to pass object around by parent scope or root scope</li>
 							<li class="fragment">Make Angular app stateless by using route parameter <pre><code>url: "/owners/:id",</code></pre></li>
@@ -690,7 +686,7 @@ app.directive('myDomDirective', function () {
 							<li class="fragment">Developer and Designer can work together on the same source code</li>
 							<li class="fragment">Directive may replace both jsp tag + javascript</li>
 							<li class="fragment">Can be viewed without application server</li>
-							<li class="fragment">May be harder to integrate with third-party javascript</li>
+							<li class="fragment">Harder to integrate with third-party javascript</li>
 						</ul>
 					</section>
 					<section>
@@ -701,17 +697,17 @@ app.directive('myDomDirective', function () {
 							<li class="fragment">2-way binding save a lot of typing</li>
 							<li class="fragment">Smaller code base but less control</li>
 							<li class="fragment">More difficult to integrate with third-pary library, it is better to have equivalent directive</li>
-							<li class="fragment">Directive is easier to read and easier to track compare to registering event</li>
+							<li class="fragment">Adding behaviours by Directive is easier to track compare to jQuery</li>
 						</ul>
 					</section>
 					<section>
 						<h2>Compare with Gwt</h2>
 						<ul>
 							<li class="fragment">Readability</li>
-							<li class="fragment">Ability to run without server</li>
+							<li class="fragment">Ability to run without application server</li>
 							<li class="fragment">RPC is very tight-coupling</li>
-							<li class="fragment">Possible to use Browser Debug</li>
-							<li class="fragment">No more swearing and waiting for webapp deployment</li>
+							<li class="fragment">Browser Debug</li>
+							<li class="fragment">No more swearing and waiting for deployment</li>
 						</ul>
 					</section>
 				</section>
@@ -719,18 +715,16 @@ app.directive('myDomDirective', function () {
 					<h1>Collaboration</h1>
 					<ul>
 						<li class="fragment">Angularised page still look very similar to original template. Designer can work on real webapp</li>
-						<li class="fragment">Angular integrate well wit Bootstrap and jQuery</li>
+						<li class="fragment">Angular integrate well with Bootstrap and jQuery</li>
 					</ul>
 				</section>
 				<section>
 					<h1>Future Proof</h1>
 					<ul>
 						<li class="fragment">Big Community</li>
-						<li class="fragment">Angular module and directive acting like Apache Common</li>
-						<li class="fragment">Angular 2, which built on ECMASCript 6 will not be backward compatible with older browser</li>
-						<li class="fragment">Angular 1.x may be developed in parallel as Play framework 1 & 2 </li>
-						<li class="fragment">Angular 1.2 support IE8, Angular 1.3 support IE9</li>
-						<li class="fragment">Directive protect the template from underlying technology (replace Bootstrap with something else?)</li>
+						<li class="fragment">Angular directives serve similar role as Apache Common Utils</li>
+						<li class="fragment">Angular 1 may be developed in parallel with Angular 2  </li>
+						<li class="fragment">Another abstraction layer protect app from underlying change of technology</li>
 						<li class="fragment">Client side script has longer life-span compare to server side scripting</li>
 					</ul>
 				</section>
