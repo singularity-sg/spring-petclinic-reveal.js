@@ -129,7 +129,7 @@
 					</section>
 					<section>
 						<img class="stretch" data-src="images/7_earlysketch.jpg"/>
-						<p>Landing List Page (initial sketch and sitemap)</p>
+						<p>Landing Page (initial sketch and sitemap)</p>
 					</section>
 					<section>
 						<img class="stretch" data-src="images/8_earlysketch.jpg"/>
@@ -147,14 +147,13 @@
 							- So tried out the app again, gathered more info, and found a documentation with Requirements and Use Cases of the PetClinic App
 						</aside>
 					</section>
-					<section data-background="images/9_usecase.png">
+					<section data-background="#fff">
+						<img src="images/9_usecase_new.png">
+						<p><a href="http://docs.spring.io/docs/petclinic.html" class="regular">http://docs.spring.io/docs/petclinic.html</a></p>
 						<aside data-markdown class="notes">
 							- Detailed sitemap and interaction flow to communicate with Han and Tony better.
 							- Define hierarchy of requirements (epicenter design) pick core goals of the design.
 						</aside>
-					</section>
-					<section data-background="#fff">
-						<img class="stretch" data-src="images/10_wireflow.png"/>
 					</section>
 					<section data-background="#fff">
 						<img class="stretch" data-src="images/11_wireflow_zoomed.png"/>
@@ -209,16 +208,23 @@
 					<section data-background="images/13_logos.png"></section>
 					<section>
 						<h2>Mockups</h2>
+						<p>Design in the browser and graphics tool (vise-versa)
 						<aside data-markdown class="notes">
-							- Designed a detailed mock (talk about design elements, attached mockups
+							- Designed a detailed mock
+							- Talk about design elements, attached mockups
+							- Reusable design components: header, footer, cards UI, circular images
 						</aside>
 					</section>
 					<section>
 						<img class="stretch" data-src="images/14_mockup_a.png"/>
-						<p>Dashboard mockup</p>
+						<p>Dashboard mockup (based off wireframe sketch)</p>
 					</section>
 					<section>
 						<img class="stretch" data-src="images/14_mockup_b.png"/>
+						<p>Dashboard mockup (this was the basis for development) </p>
+					</section>
+					<section>
+						<img class="stretch" data-src="images/14_mockup_c.png"/>
 						<p>Dashboard mockup updated (color's based on the logo)</p>
 					</section>
 					<section>
@@ -256,7 +262,7 @@
 						</aside>
 					</section>
 					<section>
-						<h3>Cons</h3>
+						<h3>Bootstrap Cons</h3>
 						<ul>
 							<li class="fragment">Could result to conflicts with existing code</li>
 							<li class="fragment">Generic design (all websites look almost the same if it's not customize accordingly)</li>
@@ -295,8 +301,8 @@
 						<h2>Implementation</h2>
 						<ul>
 							<li>Share updates on design</li>
-							<li>Push code often; Leave a note of the changes</li>
-							<li>Designing back and forth on the browser and Photoshop</li>
+							<li>Push code often then leave a note of the changes</li>
+							<li>Design in the browser</li>
 							<li>Angularise Bootstrap</li>
 						</ul>
 						<aside data-markdown class="notes">
@@ -341,8 +347,25 @@
 					</section>
 					<section>
 						<h2>Demo</h3>
-						<p><a href="http://petclinic.hopto.org/petclinic" class="highlight" target="_blank">http://petclinic.hopto.org/petclinic</a>
+						<p>
+							Current: <a href="http://demo-spring-petclinic.cfapps.io/" class="highlight" target="_blank">http://demo-spring-petclinic.cfapps.io/</a>
 						</p>
+						<p>
+							New: <a href="http://petclinic.hopto.org/petclinic" class="highlight" target="_blank">http://petclinic.hopto.org/petclinic</a>
+						</p>
+						<aside data-markdown class="notes">
+							1. Public website.
+								- Priming in the hero area
+								- Make appointment
+							2. Sigin to Dashboard
+							3. Navigate to Owners, Pets, and Veterinarians.
+							4. Back to Owners and click the profile image
+							5. Owners details, explain the layout, navigate to next Owner, & Back to Owners
+							6. Add an Owner
+							7. Edit an Owner
+							8. Search Pet
+							9. Logout
+						</aside>
 					</section>
 				</section>
 
