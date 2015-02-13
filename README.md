@@ -1,4 +1,5 @@
 # Improving communications between Design and Development
 
-Using Bootstrap/AngularJS/Spring to improve communications between UX/Designers and developers
-Reveal JS slides for spring-petclinic angularjs presentation
+This is a presentation on using Bootstrap/AngularJS/Spring to improve communications between UX/Designers and developers. We are sharing our experience designing and developing the familiar Spring Pet Clinic app together.
+
+Disclaimer: This is not an AngularJS or Bootstrap tutorial
